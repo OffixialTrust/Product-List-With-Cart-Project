@@ -41,6 +41,10 @@
   .details-holder {
     justify-self: start;
     line-height: 68%;
+
+    .item-name {
+      line-height: normal;
+    }
   }
 }
 

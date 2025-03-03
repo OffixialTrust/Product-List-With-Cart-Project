@@ -4,9 +4,9 @@
 @media only screen and (min-width: 768px) {
   body {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 4.5fr 2fr;
     column-gap: 20px;
-    padding: 60px;
+    padding: 20px 80px 80px;
   }
   
   .container {

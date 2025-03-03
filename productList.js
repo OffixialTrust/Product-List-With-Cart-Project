@@ -208,9 +208,6 @@ function updateTotalPrice() {
 confirmOrder.addEventListener("click", () => {
   orderConfirmed.style.display = "block";
   qS("#overlay").style.display = "block";
-  if (window.matchMedia("(max-width: 767px)").matches) {
-    qS("#overlay").style.display = "block";
-  }
 });
 
 qS("#start-new-order").addEventListener("click", () => {

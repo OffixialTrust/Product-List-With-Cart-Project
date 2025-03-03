@@ -2,7 +2,7 @@
 @use "mixins" as *;
 
 .cart {
-  @include box($width: $item-width, $padding: 20px, $border-radius: $small-bd-radius);
+  @include box($padding: 20px, $border-radius: $small-bd-radius);
   background: $white;
     
     h2 {

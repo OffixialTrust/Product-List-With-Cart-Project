@@ -27,7 +27,7 @@ const viewCart = qS(".view-cart");
 const emptyCart = qS(".empty-cart");
 const orderConfirmed = qS(".order-confirmed");
 
-let device = "mobile";
+let device;
 
 // Inputting the data into the details of "item"
 for (let i = 0; i < data.length; i++) {
@@ -35,7 +35,6 @@ for (let i = 0; i < data.length; i++) {
   categories[i].textContent = data[i].category;
   prices[i].textContent = "$" + data[i].price.toFixed(2);
   
-  /*
   if (window.matchMedia("(max-width: 767px)").matches) {
     device = "mobile";
 } else if (window.matchMedia("(min-width: 768px) and (max-width: 1024px)").matches) {
@@ -43,7 +42,6 @@ for (let i = 0; i < data.length; i++) {
 } else {
     device = "desktop";
 }
-  */
 
 images[i].src = data[i].image[device];
   addProductStyles(i);

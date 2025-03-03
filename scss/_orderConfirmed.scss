@@ -41,11 +41,15 @@
   .details-holder {
     justify-self: start;
     line-height: 68%;
+
+    .item-name {
+      line-height: normal;
+    }
   }
 }
 
 #overlay {
-  @include box($height: 100%);
+  @include box($width: 100vh, $height: 100vh);
   position: fixed;
   top: 0;
   left: 0;

@@ -1,0 +1,114 @@
+@use "sass:math";
+@use "./scss/variables" as *;
+@use "./scss/mixins" as *;
+@use "./scss/layout";
+@use "./scss/cart";
+@use "./scss/orderConfirmed";
+@use "./scss/responsive";
+
+.container {
+  @include box;
+    .item {
+      @include box ($width: $item-width, $margin: 20px 0);
+    }
+    
+    h1 {
+      color: $rose-900;
+      font-weight: $boldest;
+    }
+}
+
+.img-container {
+  position: relative;
+  @include box($width: $item-width, $height: 200px);
+  margin-bottom: 30px;
+  
+  .main-img {
+    width: 100%;
+    height: 100%;
+    border-radius: $small-bd-radius;
+    @include transition(border);
+  }
+}
+
+
+.button-container {
+  $width: 160px;
+  $height: 40px;
+  position: absolute;
+  left: math.div($item-width - $width, 2);
+  bottom: -20px;
+  overflow: hidden;
+  border: 1px solid $rose-400;
+  @include box($width, $height, $border-radius: $big-bd-radius);
+  
+  .cart-button {
+    background-color: $rose-50;
+    @include cursor;
+    @include flex(center, center);
+    position: absolute;
+    top: 0;
+    border: none;
+    width: 100%;
+    height: 100%;
+    
+    .add-to-cart {
+      vertical-align: middle;
+      font-weight: $bolder;
+      margin-left: 8px;
+      // font-size: $medium-font;
+      color: $rose-900;
+    }
+  }
+    
+  .item-quantity-holder {
+    @include flex(space-around, center);
+    background-color: $main-orange;
+   @include box($height: 100%);
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    @include transition(top);
+    
+      .item-quantity {
+        color: $white;
+      }
+      
+     
+      .alter-quantity {
+        border: 1px solid $white;
+        border-radius: 50%;
+        padding: 5px;
+        @include cursor;
+      }
+   }
+}
+
+.button-container:hover {
+  border: 1px solid $main-orange;
+}
+
+.small-text {
+  color: $rose-500;
+  margin: 0;
+}
+
+.dark-bold {
+  font-weight: $bolder;
+  color: $rose-900;
+  margin: 5px 0;
+}
+
+.orange-text {
+  color: $main-orange;
+  font-weight: $bold;
+  margin: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.dark-text {
+  color: $rose-900;
+}

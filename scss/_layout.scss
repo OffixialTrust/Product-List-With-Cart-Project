@@ -1,0 +1,13 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: $rose-100;
+  font-family: 'red hat text';
+  @include box($padding: 20px);
+  position: relative;
+}

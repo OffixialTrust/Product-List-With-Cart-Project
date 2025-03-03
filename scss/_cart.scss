@@ -1,0 +1,85 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.cart {
+  @include box($width: $item-width, $padding: 20px, $border-radius: $small-bd-radius);
+  background: $white;
+    
+    h2 {
+      margin-bottom: 10px;
+    }
+}
+
+
+.view-cart {
+  display: none;
+}
+
+
+
+.individual-order-details {
+  @include flex(space-between, center);
+    border-bottom: 0.5px solid $rose-300;
+}
+
+.single-item {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.remove-item {
+    border: 1px solid $rose-300;
+    border-radius: 50%;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.total-order {
+  @include flex(space-between, center);
+}
+
+.large-text {
+    color: $rose-900;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.carbon-neutral {
+  @include flex(space-around, center);
+  background-color: $rose-100;
+  @include box($padding: 0 10px, $border-radius: $small-bd-radius);
+  font-size: 14.5px;    
+}
+
+.button {
+  @include box($padding: 16px, $margin: 20px 0 0 0, $border-radius: $big-bd-radius);
+  border: none;
+  background-color: $main-orange;
+  cursor: pointer;
+  color: $white;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.button:hover {
+  border: 1px solid $main-orange;
+  background: $white;
+  color: $main-orange;
+}
+
+.empty-cart-icon {
+  width: 100%;
+  display: grid;
+    
+}
+
+.empty-icon {
+  align-self: start;
+  justify-self: center;
+}
+
+.empty-cart-icon p {
+  margin-top: 10px;
+  align-self: end;
+  justify-self: center;
+}

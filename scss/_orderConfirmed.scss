@@ -1,0 +1,53 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.order-confirmed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 340px;
+  display: none;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  
+  h1 {
+    margin: 10px 0 0 0;   
+  }
+}
+
+.confirmed-orders {
+  @include box($padding: 10px, $margin: 20px 0 0 0, $border-radius: $small-bd-radius);
+  background: $rose-100;
+}
+
+.confirmed-item-image {
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: $small-bd-radius;
+}
+
+.confirmed-item {
+  @include box;
+  display: grid;
+  grid-template-columns: 1fr 5.5fr 1fr;
+  column-gap: 10px;
+  align-items: center;
+  border-bottom: 0.5px solid $rose-300;
+  
+  .total-item-price {
+    justify-self: end;
+  }
+  
+  .details-holder {
+    justify-self: start;
+    line-height: 68%;
+  }
+}
+
+#overlay {
+  @include box($height: 100%);
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: none;
+}

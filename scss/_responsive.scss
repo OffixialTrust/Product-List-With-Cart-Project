@@ -1,0 +1,32 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+@media only screen and (min-width: 768px) {
+  body {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 20px;
+    padding: 60px;
+  }
+  
+  .container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto auto auto;
+    justify-self: start;
+  
+    h1 {
+      grid-column: 1 / 4;
+    }
+    
+  }
+  
+   .empty-cart, .view-cart {
+    align-self: start;
+    justify-self: end;
+  } 
+
+  .order-confirmed {
+    width: 400px;
+  }
+}

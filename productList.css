@@ -217,7 +217,7 @@ body {
 .img-container {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 210px;
   padding: 0;
   margin: 0;
   border-radius: none;
@@ -258,6 +258,7 @@ body {
   vertical-align: middle;
   font-weight: 600;
   margin-left: 8px;
+  font-size: 15px;
   color: hsl(14, 65%, 9%);
 }
 .button-container .item-quantity-holder {

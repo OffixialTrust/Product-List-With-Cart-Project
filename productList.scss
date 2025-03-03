@@ -20,7 +20,7 @@
 
 .img-container {
   position: relative;
-  @include box($height: 200px);
+  @include box($height: 210px);
   margin-bottom: 30px;
   
   .main-img {
@@ -56,7 +56,7 @@
       vertical-align: middle;
       font-weight: $bolder;
       margin-left: 8px;
-      // font-size: $medium-font;
+      font-size: 15px;
       color: $rose-900;
     }
   }

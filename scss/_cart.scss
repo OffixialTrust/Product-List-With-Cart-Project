@@ -67,6 +67,10 @@
   color: $main-orange;
 }
 
+.cart .item-quantity {
+  line-height: normal;
+}
+
 .empty-cart-icon {
   width: 100%;
   display: grid;

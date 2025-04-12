@@ -2,7 +2,7 @@
 @use "mixins" as *;
 
 .order-confirmed {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   width: 85%;
